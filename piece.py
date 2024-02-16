@@ -1,7 +1,7 @@
 
 class Piece:
     def __init__(self, position, player): # Skal vi her initialisere en piecevalue eller lignende så når vi når til AI'en, så kan vi sætte en værdi på brikkerne? 
-        # Ville nok være (1,3,3,5,9) for hhv. bonde, springer, løber osv. 
+        # Ville nok være (1,3,3,5,9) for hhv. bonde, springer, løber osv. og inf/meget høj for kongen
         self.position = position
         self.player = player
         self.hasmoved = False
