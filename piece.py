@@ -1,9 +1,14 @@
 
 class Piece:
-    def __init__(self, position, player):
+    def __init__(self, position, player): # Skal vi her initialisere en piecevalue eller lignende så når vi når til AI'en, så kan vi sætte en værdi på brikkerne? 
+        # Ville nok være (1,3,3,5,9) for hhv. bonde, springer, løber osv. 
         self.position = position
         self.player = player
         self.hasmoved = False
+
+        # Hvis vi laver init med value: 
+        # self.value_sign = 1 if color == "w" else -1 
+        # self.value = value*value_sign
 
     
 
