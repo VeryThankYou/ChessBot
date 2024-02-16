@@ -39,7 +39,7 @@ class Bishop(Piece):
 
 class Rook(Piece):
     def isMoveLegal(self,newPos):
-        if abs(newPos[0]-self.position[0]) == 0 and abs(newPos[1]-self.position[1])>0 or abs(newPos[1]-self.position[1]) == 0 and abs(newPos[0]-self.position[0])>0:
+        if (abs(newPos[0]-self.position[0]) == 0 and abs(newPos[1]-self.position[1])>0) or (abs(newPos[1]-self.position[1]) == 0 and abs(newPos[0]-self.position[0])>0):
             # Jeg er lidt i tvivl om 'or' kan bruges her ordentligt 
             return True 
         # Mangler del om har rykket eller ej 
@@ -47,14 +47,14 @@ class Rook(Piece):
 
 class Queen(Piece):
     def isMoveLegal(self,newPos):
-        if abs(newPos[0]-self.position[0]) == abs(newPos[1]-self.position[1]) or abs(newPos[0]-self.position[0]) == 0 and abs(newPos[1]-self.position[1])>0 or abs(newPos[1]-self.position[1]) == 0 and abs(newPos[0]-self.position[0])>0:
+        if (abs(newPos[0]-self.position[0]) == abs(newPos[1]-self.position[1])) or (abs(newPos[0]-self.position[0]) == 0 and abs(newPos[1]-self.position[1])>0) or (abs(newPos[1]-self.position[1]) == 0 and abs(newPos[0]-self.position[0])>0):
             # Er igen lidt i tvivl om 'or' er korrekt 
             return True
         return False
 
 class King(Piece):
     def isMoveLegal(self,newPos):
-        if abs(newPos[0]-self.position[0]) == 1 and abs(newPos[1]-self.position[1]) == 1 or abs(newPos[0]-self.position[0]) == 0 and abs(newPos[1]-self.position[1]) == 1 or abs(newPos[0]-self.position[0]) == 1 and abs(newPos[1]-self.position[1]) == 0:
+        if abs(newPos[0]-self.position[0]) <= 1 and abs(newPos[1]-self.position[1]) <= 1:
             return True 
         return False
 
