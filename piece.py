@@ -14,7 +14,7 @@ class Piece:
 
 class Pawn(Piece):
     def __init__ (self, position, player):
-        super(Pawn,self).__init__(self, position, player)
+        super(Pawn,self).__init__(position, player)
         self.value = 1*self.value_sign
 
     def isMoveLegal(self, newPos):
@@ -44,7 +44,7 @@ class Pawn(Piece):
 
 class Knight(Piece):
     def __init__ (self, position, player):
-        super(Knight,self).__init__(self,position,player)
+        super(Knight,self).__init__(position,player)
         self.value = 3*self.value_sign
     def isMoveLegal(self,newPos):
         if abs(newPos[0]-self.position[0])> 0 and abs(newPos[1]-self.position[1])> 0 and abs(newPos[0]-self.position[0]) + abs(newPos[1]-self.position[1]) == 3: 
@@ -54,7 +54,7 @@ class Knight(Piece):
 
 class Bishop(Piece):
     def __init__ (self, position, player):
-        super(Bishop,self).__init__(self, position, player)
+        super(Bishop,self).__init__(position, player)
         self.value = 3*self.value_sign
     def isMoveLegal(self,newPos):
         if abs(newPos[0]-self.position[0]) == abs(newPos[1]-self.position[1]):
@@ -63,7 +63,7 @@ class Bishop(Piece):
 
 class Rook(Piece):
     def __init__ (self, position, player):
-        super(Rook,self).__init__(self, position, player)
+        super(Rook,self).__init__(position, player)
         self.value = 5*self.value_sign
     def isMoveLegal(self,newPos):
         if (abs(newPos[0]-self.position[0]) == 0 and abs(newPos[1]-self.position[1])>0) or (abs(newPos[1]-self.position[1]) == 0 and abs(newPos[0]-self.position[0])>0):
@@ -74,7 +74,7 @@ class Rook(Piece):
 
 class Queen(Piece):
     def __init__ (self, position, player):
-        super(Queen,self).__init__(self, position, player)
+        super(Queen,self).__init__(position, player)
         self.value = 9*self.value_sign
     def isMoveLegal(self,newPos):
         if (abs(newPos[0]-self.position[0]) == abs(newPos[1]-self.position[1])) or (abs(newPos[0]-self.position[0]) == 0 and abs(newPos[1]-self.position[1])>0) or (abs(newPos[1]-self.position[1]) == 0 and abs(newPos[0]-self.position[0])>0):
@@ -84,7 +84,7 @@ class Queen(Piece):
 
 class King(Piece):
     def __init__ (self, position, player):
-        super(King,self).__init__(self, position, player)
+        super(King,self).__init__(position, player)
         self.value = 1000*self.value_sign
     def isMoveLegal(self,newPos):
         if abs(newPos[0]-self.position[0]) <= 1 and abs(newPos[1]-self.position[1]) <= 1:
