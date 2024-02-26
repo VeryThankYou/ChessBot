@@ -21,8 +21,25 @@ class Chess:
     def getColumn(self, index):
         return [self.grid[i][index] for i in range(8)]
     
-    
+    def printBoard(self):
+        # evt gøre pæn
+        printGrid = self.grid.copy()
+        printGrid.reverse()
+        for row in printGrid:
+            for e in row:
+                print(e, end=" ")
+            print("")
+
+    def play(self):
+        # While loop that runs as long as the game isn't over
+        # let's each player do a move command
+        pass
+
+    def isCheck(self):
+        # Checks if the position is in check. Maybe return the player who is in check if any.
+        # Maybe give a grid as parameter, so it can be checked for hypothetical states.
+        pass
 
 if __name__=="__main__":
     game = Chess()
-    print(game.grid)
+    game.printBoard()

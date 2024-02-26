@@ -11,7 +11,7 @@ class Piece:
         #self.value = value*self.value_sign
 
     def __str__(self):
-        return type(self).__name__ + " " + self.player.color
+        return str(self.__class__.__name__) + " " + self.player.color
     
 
 class Pawn(Piece):
