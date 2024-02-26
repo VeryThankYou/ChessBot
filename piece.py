@@ -10,6 +10,8 @@ class Piece:
         # self.value_sign = 1 if color == "w" else -1 
         # self.value = value*value_sign
 
+    def __str__(self):
+        return type(self).__name__ + " " + self.player.color
     
 
 class Pawn(Piece):
